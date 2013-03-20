@@ -3,6 +3,12 @@ require 'spec_helper'
 
 describe Product do 
 	it "new product with empty title" do
-		expect {Product.create!({title: nil, description: 'a great product', price: 1.99, image_url: '/images/wd4d.jpg'})}.to raise_error
+		expect {create(:product, title: nil)}.to raise_error
 	end	
+
+	it "new product with empty description" do
+		expect {create(:product, description: nil)}.to raise_error
+	end
+
+	#TODO: go through for each validation and write a test case on it	
 end
