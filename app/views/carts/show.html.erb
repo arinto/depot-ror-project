@@ -6,7 +6,7 @@
 
 <ul>
   <% @cart.line_items.each do |item| %> <%# just execute ruby, but not printing anything in the screen %>
-  <li> <%= item.product.title %></li>
+  <li> <%= item.quantity %> &times; <%= item.product.title %></li>
   <% end %>
 </ul>
 
